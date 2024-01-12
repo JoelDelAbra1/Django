@@ -1,0 +1,12 @@
+
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>My First ppp</h1>
+<p>My first paragraph.</p>
+<div>
+    {% for room in rooms %}
+        <h4>{{room.id }} -- <a href="{% url 'room' room.id %}">{{room.name}}</h4></a>
+    {% endfor %}
+</div>
+{% endblock content %}

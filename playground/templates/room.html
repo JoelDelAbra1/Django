@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+   {% extends 'main.html' %}
+   {% block content %}
+    
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+<div>
+    {% for room in rooms %}
+        <p>{{room.id }} -- {{room.name}}</p>
+    {% endfor %}
+</div>
+   {% endblock content %}
